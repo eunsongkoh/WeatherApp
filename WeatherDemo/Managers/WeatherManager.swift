@@ -15,7 +15,7 @@ class WeatherManager {
         //  If the condition fails, you must exit the scope using return, break, continue, or throw. You cannot just return in the else block without exiting the scope.
         //  Unwrapping Optionals: guard is often used to safely unwrap optionals. If the optional is nil, you can handle the failure immediately and exit.
         //  Clarity: It helps to reduce nesting by handling "failure" cases upfront, allowing you to focus on the "happy path" of your code.
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longtitude)&appid=\("1f690e3871a1dc8f6c4de92e06f8779e")&units=metric") else {fatalError("MissingURL")}
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longtitude)&appid=\("")&units=metric") else {fatalError("MissingURL")}
         
         let urlRequest = URLRequest(url: url)
         
